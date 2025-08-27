@@ -1,6 +1,7 @@
 package com.lucas.jdbc.test.service;
 
 import com.lucas.jdbc.test.dto.usuario.UsuarioAdicionarRequest;
+import com.lucas.jdbc.test.dto.usuario.UsuarioEditarEmailRequest;
 import com.lucas.jdbc.test.dto.usuario.UsuarioRemoverRequest;
 import com.lucas.jdbc.test.infra.persistence.usuario.mapper.UsuarioMapper;
 import com.lucas.jdbc.test.model.Usuario;
@@ -25,5 +26,11 @@ public class UsuarioService {
         Usuario usuario = usuarioMapper.toEntity(usuarioRemoverRequest);
 
         usuarioRepositorio.remover(usuario);
+    }
+
+    public void editarEmail(UsuarioEditarEmailRequest usuarioEditarEmailRequest) {
+        Usuario usuario = usuarioMapper.toEntity(usuarioEditarEmailRequest);
+
+        usuarioRepositorio.editarEmail(usuario, usuarioEditarEmailRequest.antigoEmail());
     }
 }

@@ -21,4 +21,9 @@ public class UsuarioRepositorioAdapter implements UsuarioRepositorio {
     public void remover(Usuario usuario) {
         usuarioDAO.remover(usuario);
     }
+
+    @Override
+    public void editarEmail(Usuario usuario, String antigoEmail) {
+        usuarioDAO.editarEmail(usuario, antigoEmail);
+    }
 }
