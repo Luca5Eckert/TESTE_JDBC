@@ -1,6 +1,9 @@
 package com.lucas.jdbc.test.repository;
 
+import com.lucas.jdbc.test.dto.usuario.UsuarioGetResponse;
 import com.lucas.jdbc.test.model.Usuario;
+
+import java.util.List;
 
 public interface UsuarioRepositorio {
 
@@ -9,4 +12,6 @@ public interface UsuarioRepositorio {
     void remover(Usuario usuario);
 
     void editarEmail(Usuario usuario, String antigoEmail);
+
+    List<Usuario> pegarUsuarios();
 }

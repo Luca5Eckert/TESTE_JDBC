@@ -4,6 +4,7 @@ import com.lucas.jdbc.test.infra.utils.BeanUtil;
 import com.lucas.jdbc.test.view.menu.aluno.MenuAdicionarAluno;
 import com.lucas.jdbc.test.view.menu.usuario.MenuAdicionarUsuario;
 import com.lucas.jdbc.test.view.menu.usuario.MenuEditarEmailUsuario;
+import com.lucas.jdbc.test.view.menu.usuario.MenuListarUsuarios;
 import com.lucas.jdbc.test.view.menu.usuario.MenuRemoverUsuario;
 
 public class Main {
@@ -11,12 +12,16 @@ public class Main {
     private static final MenuAdicionarUsuario MENU_ADICIONAR_USUARIO = new MenuAdicionarUsuario(BeanUtil.instanceUsuarioService());
     private static final MenuRemoverUsuario MENU_REMOVER_USUARIO = new MenuRemoverUsuario(BeanUtil.instanceUsuarioService());
     private static final MenuEditarEmailUsuario MENU_EDITAR_EMAIL_USUARIO = new MenuEditarEmailUsuario(BeanUtil.instanceUsuarioService());
-
+    private static final MenuListarUsuarios MENU_LISTAR_USUARIOS = new MenuListarUsuarios(BeanUtil.instanceUsuarioService());
 
     private static final MenuAdicionarAluno MENU_ADICIONAR_ALUNO = new MenuAdicionarAluno(BeanUtil.instanceAlunoService());
 
     public static void main(String[] args) {
-        editarEmailUsuario();
+        listarUsuarios();
+    }
+
+    private static void listarUsuarios() {
+        MENU_LISTAR_USUARIOS.listar();
     }
 
     private static void editarEmailUsuario() {

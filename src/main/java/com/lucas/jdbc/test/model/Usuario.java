@@ -17,6 +17,10 @@ public class Usuario {
         this.email = null;
     }
 
+    public long getId() {
+        return id;
+    }
+
     public String getNome() {
         return nome;
     }

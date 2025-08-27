@@ -4,6 +4,8 @@ import com.lucas.jdbc.test.infra.persistence.usuario.dao.UsuarioDao;
 import com.lucas.jdbc.test.model.Usuario;
 import com.lucas.jdbc.test.repository.UsuarioRepositorio;
 
+import java.util.List;
+
 public class UsuarioRepositorioAdapter implements UsuarioRepositorio {
 
     private final UsuarioDao usuarioDAO;
@@ -25,5 +27,10 @@ public class UsuarioRepositorioAdapter implements UsuarioRepositorio {
     @Override
     public void editarEmail(Usuario usuario, String antigoEmail) {
         usuarioDAO.editarEmail(usuario, antigoEmail);
+    }
+
+    @Override
+    public List<Usuario> pegarUsuarios() {
+        return usuarioDAO.pegarUsuarios();
     }
 }

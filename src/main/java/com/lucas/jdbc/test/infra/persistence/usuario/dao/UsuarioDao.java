@@ -5,7 +5,10 @@ import com.lucas.jdbc.test.model.Usuario;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UsuarioDao {
 
@@ -56,4 +59,27 @@ public class UsuarioDao {
             e.printStackTrace();
         }
     }
+
+    public List<Usuario> pegarUsuarios() {
+        String sql = "SELECT id,nome,email FROM usuarios";
+        List<Usuario> usuarios = new ArrayList<>();
+        try (Connection conn = Conexao.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String nome = rs.getString("nome");
+                String email = rs.getString("email");
+
+                Usuario usuario = new Usuario(id, nome, email);
+                usuarios.add(usuario);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return usuarios;
+    }
+
 }
