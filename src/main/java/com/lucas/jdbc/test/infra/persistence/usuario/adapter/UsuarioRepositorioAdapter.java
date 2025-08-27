@@ -16,4 +16,9 @@ public class UsuarioRepositorioAdapter implements UsuarioRepositorio {
     public void inserir(Usuario usuario){
         usuarioDAO.inserir(usuario);
     }
+
+    @Override
+    public void remover(Usuario usuario) {
+        usuarioDAO.remover(usuario);
+    }
 }

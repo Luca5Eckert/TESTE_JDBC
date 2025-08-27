@@ -1,7 +1,8 @@
-package com.lucas.jdbc.test.view.menu;
+package com.lucas.jdbc.test.view.menu.aluno;
 
 import com.lucas.jdbc.test.dto.aluno.AlunoRequest;
 import com.lucas.jdbc.test.service.AlunoService;
+import com.lucas.jdbc.test.view.menu.MenuAdicionar;
 
 import java.util.Scanner;
 

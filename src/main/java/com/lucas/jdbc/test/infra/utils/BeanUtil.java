@@ -12,6 +12,7 @@ import com.lucas.jdbc.test.service.AlunoService;
 import com.lucas.jdbc.test.service.UsuarioService;
 
 public class BeanUtil {
+
     private final static UsuarioDao USUARIO_DAO = new UsuarioDao();
     private final static UsuarioRepositorio USUARIO_REPOSITORIO = new UsuarioRepositorioAdapter(USUARIO_DAO);
     private final static UsuarioMapper USUARIO_MAPPER = new UsuarioMapper();
@@ -21,6 +22,8 @@ public class BeanUtil {
     private final static AlunoRepositorio ALUNO_REPOSITORIO = new AlunoRepositorioAdapter(ALUNO_DAO);
     private final static AlunoMapper ALUNO_MAPPER = new AlunoMapper();
     private final static AlunoService ALUNO_SERVICE = new AlunoService(ALUNO_REPOSITORIO, ALUNO_MAPPER);
+
+
 
 
     public static UsuarioService instanceUsuarioService(){

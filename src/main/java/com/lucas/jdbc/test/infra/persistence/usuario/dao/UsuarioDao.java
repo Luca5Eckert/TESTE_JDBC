@@ -25,4 +25,19 @@ public class UsuarioDao {
         }
     }
 
+    public void remover(Usuario usuario) {
+        String sql = "DELETE FROM usuarios WHERE email = (?)";
+
+        try (Connection conn = Conexao.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, usuario.getEmail());
+
+            stmt.executeUpdate();
+
+            System.out.println("Usuário deletado com sucesso!");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

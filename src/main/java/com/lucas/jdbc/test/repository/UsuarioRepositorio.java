@@ -6,4 +6,5 @@ public interface UsuarioRepositorio {
 
     public void inserir(Usuario usuario);
 
+    void remover(Usuario usuario);
 }

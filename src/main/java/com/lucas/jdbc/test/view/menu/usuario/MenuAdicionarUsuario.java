@@ -1,8 +1,8 @@
-package com.lucas.jdbc.test.view.menu;
+package com.lucas.jdbc.test.view.menu.usuario;
 
-import com.lucas.jdbc.test.dto.usuario.UsuarioRequest;
-import com.lucas.jdbc.test.model.Usuario;
+import com.lucas.jdbc.test.dto.usuario.UsuarioAdicionarRequest;
 import com.lucas.jdbc.test.service.UsuarioService;
+import com.lucas.jdbc.test.view.menu.MenuAdicionar;
 
 import java.util.Scanner;
 
@@ -24,7 +24,7 @@ public class MenuAdicionarUsuario implements MenuAdicionar {
         System.out.println("Email do usuário");
         String email = scanner.nextLine();
 
-        UsuarioRequest usuario = new UsuarioRequest(nome, email);
+        UsuarioAdicionarRequest usuario = new UsuarioAdicionarRequest(nome, email);
 
         usuarioService.inserir(usuario);
     }
