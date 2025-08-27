@@ -15,9 +15,9 @@ public class UsuarioService {
         this.usuarioMapper = usuarioMapper;
     }
 
-    public void inserirUsuario(UsuarioRequest usuarioRequest){
+    public void inserir(UsuarioRequest usuarioRequest){
         Usuario usuario = usuarioMapper.toEntity(usuarioRequest);
-        usuarioRepositorio.inserirUsuario(usuario);
+        usuarioRepositorio.inserir(usuario);
     }
 
 }

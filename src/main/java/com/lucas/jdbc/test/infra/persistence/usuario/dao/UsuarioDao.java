@@ -7,9 +7,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class UsuarioDAO {
+public class UsuarioDao {
 
-    public void inserirUsuario(Usuario usuario){
+    public void inserir(Usuario usuario){
         String sql = "INSERT INTO usuarios (nome, email) VALUES (?, ?)";
 
         try (Connection conn = Conexao.conectar();

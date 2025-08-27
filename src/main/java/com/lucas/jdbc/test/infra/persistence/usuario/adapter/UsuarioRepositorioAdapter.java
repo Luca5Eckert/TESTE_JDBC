@@ -1,19 +1,19 @@
 package com.lucas.jdbc.test.infra.persistence.usuario.adapter;
 
-import com.lucas.jdbc.test.infra.persistence.usuario.dao.UsuarioDAO;
+import com.lucas.jdbc.test.infra.persistence.usuario.dao.UsuarioDao;
 import com.lucas.jdbc.test.model.Usuario;
 import com.lucas.jdbc.test.repository.UsuarioRepositorio;
 
 public class UsuarioRepositorioAdapter implements UsuarioRepositorio {
 
-    private final UsuarioDAO usuarioDAO;
+    private final UsuarioDao usuarioDAO;
 
-    public UsuarioRepositorioAdapter(UsuarioDAO usuarioDAO) {
+    public UsuarioRepositorioAdapter(UsuarioDao usuarioDAO) {
         this.usuarioDAO = usuarioDAO;
     }
 
     @Override
-    public void inserirUsuario(Usuario usuario){
-        usuarioDAO.inserirUsuario(usuario);
+    public void inserir(Usuario usuario){
+        usuarioDAO.inserir(usuario);
     }
 }

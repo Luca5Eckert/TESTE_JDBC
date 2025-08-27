@@ -4,6 +4,6 @@ import com.lucas.jdbc.test.model.Usuario;
 
 public interface UsuarioRepositorio {
 
-    public void inserirUsuario(Usuario usuario);
+    public void inserir(Usuario usuario);
 
 }

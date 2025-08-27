@@ -7,8 +7,10 @@ public class UsuarioMapper {
 
     public Usuario toEntity(UsuarioRequest usuarioRequest){
         Usuario usuario = new Usuario();
+
         usuario.setNome(usuarioRequest.nome());
         usuario.setEmail(usuarioRequest.email());
+
         return usuario;
     }
 }
