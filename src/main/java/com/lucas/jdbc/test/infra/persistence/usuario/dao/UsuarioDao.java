@@ -82,4 +82,29 @@ public class UsuarioDao {
         return usuarios;
     }
 
+    public Usuario buscarUsuarioPorId(Usuario usuario) {
+        String sql = "SELECT id, nome, email FROM usuarios WHERE id = ?";
+        long newId = 0;
+        String nome = "";
+        String email = "";
+
+        try (Connection conn = Conexao.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setLong(1, usuario.getId());
+
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                newId = rs.getLong("id");
+                nome = rs.getString("nome");
+                email = rs.getString("email");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return new Usuario(newId, nome, email);
+    }
 }

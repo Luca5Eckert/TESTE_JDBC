@@ -1,9 +1,6 @@
 package com.lucas.jdbc.test.service;
 
-import com.lucas.jdbc.test.dto.usuario.UsuarioAdicionarRequest;
-import com.lucas.jdbc.test.dto.usuario.UsuarioEditarEmailRequest;
-import com.lucas.jdbc.test.dto.usuario.UsuarioGetResponse;
-import com.lucas.jdbc.test.dto.usuario.UsuarioRemoverRequest;
+import com.lucas.jdbc.test.dto.usuario.*;
 import com.lucas.jdbc.test.infra.persistence.usuario.mapper.UsuarioMapper;
 import com.lucas.jdbc.test.model.Usuario;
 import com.lucas.jdbc.test.repository.UsuarioRepositorio;
@@ -40,5 +37,10 @@ public class UsuarioService {
 
     public List<UsuarioGetResponse> listarUsuarios() {
         return usuarioRepositorio.pegarUsuarios().stream().map(usuarioMapper::toResponse).collect(Collectors.toList());
+    }
+
+    public UsuarioGetResponse buscarUsuario(UsuarioBuscarPorIdRequest usuarioBuscarPorIdRequest) {
+        Usuario usuario = usuarioRepositorio.buscarUsuarioPorId(usuarioMapper.toEntity(usuarioBuscarPorIdRequest));
+        return usuarioMapper.toResponse(usuario);
     }
 }

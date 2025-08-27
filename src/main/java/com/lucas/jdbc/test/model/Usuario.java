@@ -11,8 +11,15 @@ public class Usuario {
         this.nome = nome;
         this.email = email;
     }
+
     public Usuario() {
         this.id = -1;
+        this.nome = null;
+        this.email = null;
+    }
+
+    public Usuario(long id) {
+        this.id = id;
         this.nome = null;
         this.email = null;
     }

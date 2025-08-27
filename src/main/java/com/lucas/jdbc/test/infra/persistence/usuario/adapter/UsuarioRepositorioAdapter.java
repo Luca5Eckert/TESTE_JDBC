@@ -33,4 +33,9 @@ public class UsuarioRepositorioAdapter implements UsuarioRepositorio {
     public List<Usuario> pegarUsuarios() {
         return usuarioDAO.pegarUsuarios();
     }
+
+    @Override
+    public Usuario buscarUsuarioPorId(Usuario usuario) {
+        return usuarioDAO.buscarUsuarioPorId(usuario);
+    }
 }

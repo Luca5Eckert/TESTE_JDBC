@@ -1,9 +1,6 @@
 package com.lucas.jdbc.test.infra.persistence.usuario.mapper;
 
-import com.lucas.jdbc.test.dto.usuario.UsuarioAdicionarRequest;
-import com.lucas.jdbc.test.dto.usuario.UsuarioEditarEmailRequest;
-import com.lucas.jdbc.test.dto.usuario.UsuarioGetResponse;
-import com.lucas.jdbc.test.dto.usuario.UsuarioRemoverRequest;
+import com.lucas.jdbc.test.dto.usuario.*;
 import com.lucas.jdbc.test.model.Usuario;
 
 import java.util.function.Function;
@@ -39,4 +36,9 @@ public class UsuarioMapper {
 
         return usuario;
     }
+
+    public Usuario toEntity(UsuarioBuscarPorIdRequest usuarioBuscarPorIdRequest) {
+        return new Usuario(usuarioBuscarPorIdRequest.id());
+    }
+
 }

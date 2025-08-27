@@ -18,9 +18,9 @@ public class MenuListarUsuarios implements MenuListar {
     public void listar() {
         List<UsuarioGetResponse> listaUsuarios = usuarioService.listarUsuarios();
 
-        System.out.println("--------------------");
+        System.out.println("--------------------------------");
         System.out.println(" Usuários: ");
         listaUsuarios.stream().forEach(System.out::println);
-        System.out.println("--------------------");
+        System.out.println("--------------------------------");
     }
 }
