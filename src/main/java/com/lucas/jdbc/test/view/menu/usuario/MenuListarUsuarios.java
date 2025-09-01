@@ -2,7 +2,7 @@ package com.lucas.jdbc.test.view.menu.usuario;
 
 import com.lucas.jdbc.test.dto.usuario.UsuarioGetResponse;
 import com.lucas.jdbc.test.service.UsuarioService;
-import com.lucas.jdbc.test.view.menu.MenuListar;
+import com.lucas.jdbc.test.view.menu.abstracoes.MenuListar;
 
 import java.util.List;
 

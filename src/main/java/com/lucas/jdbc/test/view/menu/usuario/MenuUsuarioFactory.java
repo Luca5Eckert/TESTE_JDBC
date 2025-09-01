@@ -1,7 +1,8 @@
 package com.lucas.jdbc.test.view.menu.usuario;
 
 import com.lucas.jdbc.test.infra.utils.BeanUtil;
-import com.lucas.jdbc.test.view.menu.*;
+import com.lucas.jdbc.test.model.TipoEntidades;
+import com.lucas.jdbc.test.view.menu.abstracoes.*;
 
 public class MenuUsuarioFactory implements MenuFactory {
     private final static MenuAdicionar MENU_ADICIONAR = new MenuAdicionarUsuario(BeanUtil.instanceUsuarioService());
@@ -9,8 +10,6 @@ public class MenuUsuarioFactory implements MenuFactory {
     private final static MenuEditar MENU_EDITAR = new MenuEditarEmailUsuario(BeanUtil.instanceUsuarioService());
     private final static MenuListar MENU_LISTAR = new MenuListarUsuarios(BeanUtil.instanceUsuarioService());
     private final static MenuBuscar MENU_BUSCAR = new MenuBuscarPorIdUsuario(BeanUtil.instanceUsuarioService());
-
-
 
     @Override
     public MenuBuscar instanceBuscar() {
@@ -35,6 +34,11 @@ public class MenuUsuarioFactory implements MenuFactory {
     @Override
     public MenuListar instanceListar() {
         return MENU_LISTAR;
+    }
+
+    @Override
+    public TipoEntidades pegarTipo() {
+        return TipoEntidades.USUARIO;
     }
 
 }

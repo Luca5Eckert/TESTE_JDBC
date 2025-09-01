@@ -1,4 +1,6 @@
-package com.lucas.jdbc.test.view.menu;
+package com.lucas.jdbc.test.view.menu.abstracoes;
+
+import com.lucas.jdbc.test.model.TipoEntidades;
 
 public interface MenuFactory {
 
@@ -11,5 +13,7 @@ public interface MenuFactory {
     MenuRemover instanceRemover();
 
     MenuListar instanceListar();
+
+    TipoEntidades pegarTipo();
 
 }

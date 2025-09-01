@@ -2,7 +2,7 @@ package com.lucas.jdbc.test.view.menu.usuario;
 
 import com.lucas.jdbc.test.dto.usuario.UsuarioEditarEmailRequest;
 import com.lucas.jdbc.test.service.UsuarioService;
-import com.lucas.jdbc.test.view.menu.MenuEditar;
+import com.lucas.jdbc.test.view.menu.abstracoes.MenuEditar;
 
 import java.util.Scanner;
 

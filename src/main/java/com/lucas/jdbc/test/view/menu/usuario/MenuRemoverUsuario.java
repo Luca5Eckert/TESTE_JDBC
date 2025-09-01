@@ -2,7 +2,7 @@ package com.lucas.jdbc.test.view.menu.usuario;
 
 import com.lucas.jdbc.test.dto.usuario.UsuarioRemoverRequest;
 import com.lucas.jdbc.test.service.UsuarioService;
-import com.lucas.jdbc.test.view.menu.MenuRemover;
+import com.lucas.jdbc.test.view.menu.abstracoes.MenuRemover;
 
 import java.util.Scanner;
 

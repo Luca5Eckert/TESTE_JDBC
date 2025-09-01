@@ -1,4 +1,4 @@
-package com.lucas.jdbc.test.view.menu;
+package com.lucas.jdbc.test.view.menu.abstracoes;
 
 public interface MenuEditar {
 
