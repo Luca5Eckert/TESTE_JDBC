@@ -1,5 +1,6 @@
 package com.lucas.jdbc.test.service;
 
+import com.lucas.jdbc.test.dto.aluno.AlunoRemoverRequest;
 import com.lucas.jdbc.test.dto.aluno.AlunoRequest;
 import com.lucas.jdbc.test.infra.persistence.aluno.mapper.AlunoMapper;
 import com.lucas.jdbc.test.model.Aluno;
@@ -18,6 +19,11 @@ public class AlunoService {
     public void inserir(AlunoRequest alunoRequest) {
         Aluno aluno = alunoMapper.toEntity(alunoRequest);
         alunoRepositorio.inserir(aluno);
+    }
+
+    public void remover(AlunoRemoverRequest alunoRemoverRequest){
+        alunoRepositorio.remover(alunoRemoverRequest.matricula());
+
     }
 
 }

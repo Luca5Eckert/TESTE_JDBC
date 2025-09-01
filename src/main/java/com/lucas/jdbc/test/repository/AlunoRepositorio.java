@@ -6,4 +6,5 @@ public interface AlunoRepositorio {
 
     public void inserir(Aluno aluno);
 
+    void remover(String matricula);
 }

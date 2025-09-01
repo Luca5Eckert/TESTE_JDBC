@@ -1,15 +1,17 @@
 package com.lucas.jdbc.test;
 
+import com.lucas.jdbc.test.view.MenuManager;
+import com.lucas.jdbc.test.view.MenuProvider;
 import com.lucas.jdbc.test.view.menu.MenuGeral;
 import com.lucas.jdbc.test.view.menu.abstracoes.Menu;
 
 public class Main {
 
     public static void main(String[] args) {
-        Menu menu = new MenuGeral();
-        while (true){
-            menu = menu.executarMenu();
-            menu.executarMenu();
-        }
+
+        MenuManager menuManager = new MenuManager(new MenuProvider(new MenuGeral()));
+
+        menuManager.iniciarFluxoMenu();
+
     }
 }

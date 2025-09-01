@@ -16,4 +16,9 @@ public class AlunoRepositorioAdapter implements AlunoRepositorio {
     public void inserir(Aluno aluno) {
         alunoDao.inserir(aluno);
     }
+
+    @Override
+    public void remover(String matricula) {
+
+    }
 }
