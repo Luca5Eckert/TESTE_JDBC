@@ -16,6 +16,10 @@ public enum TipoEntidades {
         this.menuFactory = menuFactory;
     }
 
+    public MenuFactory instanceFactory(){
+        return menuFactory;
+    }
+
     public static void listar() {
         int i = 0;
         for(TipoEntidades tipoEntidades : TipoEntidades.values()){
