@@ -6,7 +6,7 @@ import java.text.ParseException;
 public class GlobalExceptionHandler {
 
     public static String tratarExcecao(Exception e){
-        String mensagem = "Error";
+        String mensagem = e.getMessage();
 
         if(e instanceof NumberFormatException){
             mensagem = "Input invalido";
