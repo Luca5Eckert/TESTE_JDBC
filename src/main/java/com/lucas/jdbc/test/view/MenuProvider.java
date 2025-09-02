@@ -1,5 +1,6 @@
 package com.lucas.jdbc.test.view;
 
+import com.lucas.jdbc.test.infra.exceptions.GlobalExceptionHandler;
 import com.lucas.jdbc.test.view.menu.abstracoes.Menu;
 
 public class MenuProvider {
@@ -17,7 +18,7 @@ public class MenuProvider {
         try{
             menu = menu.executarMenu();
         } catch (Exception exception){
-            tratarExceções(exception);
+            GlobalExceptionHandler.tratarExcecao(exception);
         }
     }
 

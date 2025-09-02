@@ -16,6 +16,13 @@ public enum TipoEntidades {
         this.menuFactory = menuFactory;
     }
 
+    public static TipoEntidades pegarTipo(int i) {
+        if(i >= TipoEntidades.values().length || i < 0){
+            throw new RuntimeException("Input invalido");
+        }
+        return TipoEntidades.values()[i];
+    }
+
     public MenuFactory instanceFactory(){
         return menuFactory;
     }

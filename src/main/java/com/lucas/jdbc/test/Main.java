@@ -3,7 +3,6 @@ package com.lucas.jdbc.test;
 import com.lucas.jdbc.test.view.MenuManager;
 import com.lucas.jdbc.test.view.MenuProvider;
 import com.lucas.jdbc.test.view.menu.MenuGeral;
-import com.lucas.jdbc.test.view.menu.abstracoes.Menu;
 
 public class Main {
 

@@ -13,10 +13,13 @@ public class MenuGeral implements Menu{
         Scanner scanner = new Scanner(System.in);
 
         System.out.println(" Escolhe que entidade deseja acessar menu: ");
+        System.out.println(" S - Sair");
         TipoEntidades.listar();
+        String input = scanner.nextLine();
 
-        TipoEntidades tipoEntidades = TipoEntidades.values()[scanner.nextInt()];
-        scanner.nextLine();
+        if(input.equalsIgnoreCase("S")) return null;
+
+        TipoEntidades tipoEntidades = TipoEntidades.pegarTipo(Integer.parseInt(input));
 
         MenuFactory menuFactory = menuFactoryProvider.instanceTo(tipoEntidades);
 
