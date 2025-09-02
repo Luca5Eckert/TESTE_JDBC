@@ -18,7 +18,8 @@ public class MenuProvider {
         try{
             menu = menu.executarMenu();
         } catch (Exception exception){
-            GlobalExceptionHandler.tratarExcecao(exception);
+            String mensagem = GlobalExceptionHandler.tratarExcecao(exception);
+            System.out.println(mensagem);
         }
     }
 
